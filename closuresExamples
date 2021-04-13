@@ -1,0 +1,26 @@
+Example 1 :
+
+using class component:
+
+class Closures extends React.Components
+{
+showMessage=(msg)=>()=>
+{
+console.log(`It is a Closures examples ${msg} `)
+}
+
+render()
+{
+return()
+{
+<button onClick={this.showMessage(“Hello Closures”)}>
+Click Me
+</button>
+}
+}
+
+}
+
+Reason :- When we call the showMessage we also pass the msg variable. 
+The other function which the showMessage returns is defined inside the showMessage creating a closures. 
+So even if the showMessage gets executed we still can access the msg variable.
